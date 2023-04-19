@@ -31,7 +31,46 @@ let result = formFunc (input)
 
 // HARD: Create 4 math functions, one called add() that adds 2 numbers, one called subtract() that subtracts 2 numbers, one called multiply() to multiply 2 numbers, and one called divide() to divide two numbers.
 
+// Addition
+let numImput1 = parseInt(prompt("Enter Number 1: "))
+let numInput2 = parseInt(prompt("Enter Number 2: "))
 
+function addTwoNumbers(){
+    console.log(numImput1 + numInput2)
+}
+
+let result2 = addTwoNumbers()
+
+// Subtraction
+let numImput2 = parseInt(prompt("Enter Number 1: "))
+let numInput3 = parseInt(prompt("Enter Number 2: "))
+
+function subTwoNumbers(){
+    console.log(numImput2 - numInput3)
+}
+
+let result3 = subTwoNumbers()
+
+// Multiplication
+let numImput4 = parseInt(prompt("Enter Number 1: "))
+let numInput5 = parseInt(prompt("Enter Number 2: "))
+
+function multTwoNumbers(){
+    console.log(numImput4 * numInput5)
+}
+
+let result4 = multTwoNumbers()
+
+// Divide
+
+let numImput6 = parseInt(prompt("Enter Number 1: "))
+let numInput7 = parseInt(prompt("Enter Number 2: "))
+
+function divTwoNumbers(){
+    console.log(numImput6 / numInput7)
+}
+
+let result5 = divTwoNumbers()
 
 // VERY HARD: Create a simple calculator that prompts the user for a number, an operator (either +, -, * or /) and another number, and then uses the functions created in the hard challenge to output the value in sentence form. Example output: "3 + 4 = 7"
 
