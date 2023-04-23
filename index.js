@@ -1,76 +1,86 @@
-// // // VERY EASY: Create two variables and assign a number to each. Console log the difference between the numbers. Example output: “The difference between 6 and 2 is 4”
+// // VERY EASY: Create two variables and assign a number to each. Console log the difference between the numbers. Example output: “The difference between 6 and 2 is 4”
 
-// let num1 = 6;
-// let num2 = 4;
-// let diff = num1 - num2;
+let num1 = 6;
+let num2 = 4;
+let diff = num1 - num2;
 
-// console.log(`The difference between ${num1} and ${num2} is ${diff}`); 
+console.log(`The difference between ${num1} and ${num2} is ${diff}`); 
 
-// // // EASY: Create two variables and assign a person’s name to each. Console log a statement that says which name is shorter or longer, and by how many characters.                                                                                 Example output: “The name Thomas is longer than John by 2 characters”
+// // EASY: Create two variables and assign a person’s name to each. Console log a statement that says which name is shorter or longer, and by how many characters.                                                                                 Example output: “The name Thomas is longer than John by 2 characters”
 
-// let name1 = "Oscar"
-// let name2 = "Jose"
-// let nameDiff = name1.length - name2.length
+let name1 = "Oscar"
+let name2 = "Jose"
+let logOutput = ""
 
-// console.log(`The name ${name1} is longer than ${name2} by ${nameDiff}`)
+if (name1.length - name2.length > 0 ){
+    let nameDiff = name1.length - name2.length
+    logOutput = `The name ${name1} is longer than ${name2} by ${nameDiff} characters`
+} else if (name1.length - name2.length < 0 ){
+    let nameDiff = name2.length - name1.length
+    logOutput = `The name ${name2} is longer than ${name1} by ${nameDiff} characters`
+} else {
+    logOutput = `They are the same length`
+}
 
-// // // MEDIUM: Write a program to tell if someone is shouting (typing in all caps), whispering (typing in all lowercase), or neither. Use prompt to get user input, and then console log whether the user was shouting, whispering, or talking normally.
+console.log(logOutput)
+
+// // MEDIUM: Write a program to tell if someone is shouting (typing in all caps), whispering (typing in all lowercase), or neither. Use prompt to get user input, and then console log whether the user was shouting, whispering, or talking normally.
 
 
-// let input = prompt("Type your message: ")
-// function formFunc(){
-//     if (input === input.toUpperCase()){
-//         console.log("Stop Shouting!")
-//     } else if (input === input.toLowerCase()){
-//         console.log("Why are you wispering?")
-//     } else 
-//     console.log("Thank you for talking normally")
-// }
+let input = prompt("Type your message: ")
+function formFunc(){
+    if (input === input.toUpperCase()){
+        console.log("Stop Shouting!")
+    } else if (input === input.toLowerCase()){
+        console.log("Why are you wispering?")
+    } else 
+    console.log("Thank you for talking normally")
+}
 
-// let result = formFunc (input)
+let result = formFunc (input)
 
-// // // HARD: Create 4 math functions, one called add() that adds 2 numbers, one called subtract() that subtracts 2 numbers, one called multiply() to multiply 2 numbers, and one called divide() to divide two numbers.
+// // HARD: Create 4 math functions, one called add() that adds 2 numbers, one called subtract() that subtracts 2 numbers, one called multiply() to multiply 2 numbers, and one called divide() to divide two numbers.
 
 // Addition
-// let numImput1 = parseInt(prompt("Enter Number 1: "))
-// let numInput2 = parseInt(prompt("Enter Number 2: "))
+let numImput1 = parseInt(prompt("Enter Number 1: "))
+let numInput2 = parseInt(prompt("Enter Number 2: "))
 
-// function addTwoNumbers(){
-//     console.log(numImput1 + numInput2)
-// }
+function addTwoNumbers(){
+    console.log(numImput1 + numInput2)
+}
 
-// let result2 = addTwoNumbers()
+let result2 = addTwoNumbers()
 
-// // Subtraction
-// let numImput2 = parseInt(prompt("Enter Number 1: "))
-// let numInput3 = parseInt(prompt("Enter Number 2: "))
+// Subtraction
+let numImput2 = parseInt(prompt("Enter Number 1: "))
+let numInput3 = parseInt(prompt("Enter Number 2: "))
 
-// function subTwoNumbers(numImput2, numInput3){  // Able to change inside the code ex: numImput 2 and3
-//     console.log(numImput2 - numInput3)
-// }
+function subTwoNumbers(numImput2, numInput3){  // Able to change inside the code ex: numImput 2 and3
+    console.log(numImput2 - numInput3)
+}
 
-// let result3 = subTwoNumbers(numImput2, numInput3)
+let result3 = subTwoNumbers(numImput2, numInput3)
 
-// // Multiplication
-// let numImput4 = parseInt(prompt("Enter Number 1: "))
-// let numInput5 = parseInt(prompt("Enter Number 2: "))
+// Multiplication
+let numImput4 = parseInt(prompt("Enter Number 1: "))
+let numInput5 = parseInt(prompt("Enter Number 2: "))
 
-// function multTwoNumbers(){
-//     console.log(numImput4 * numInput5)
-// }
+function multTwoNumbers(){
+    console.log(numImput4 * numInput5)
+}
 
-// let result4 = multTwoNumbers()
+let result4 = multTwoNumbers()
 
-// // Divide
+// Divide
 
-// let numImput6 = parseInt(prompt("Enter Number 1: "))
-// let numInput7 = parseInt(prompt("Enter Number 2: "))
+let numImput6 = parseInt(prompt("Enter Number 1: "))
+let numInput7 = parseInt(prompt("Enter Number 2: "))
 
-// function divTwoNumbers(){
-//     console.log(numImput6 / numInput7)
-// }
+function divTwoNumbers(){
+    console.log(numImput6 / numInput7)
+}
 
-// let result5 = divTwoNumbers()
+let result5 = divTwoNumbers()
 
 // VERY HARD: Create a simple calculator that prompts the user for a number, an operator (either +, -, * or /) and another number, and then uses the functions created in the hard challenge to output the value in sentence form. Example output: "3 + 4 = 7"
 
@@ -83,6 +93,8 @@ let finalResult;
 
 
 function simpleCalc(){
+
+    
     //Validate user input
     if (operationSelection !== "+" && operationSelection !== "-" && operationSelection !=="*" && operationSelection!=="/" ){
         prompt("Invalid Selection Please Choose: + , - , * , /")
