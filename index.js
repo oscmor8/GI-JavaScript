@@ -85,26 +85,24 @@ let result5 = divTwoNumbers()
 // VERY HARD: Create a simple calculator that prompts the user for a number, an operator (either +, -, * or /) and another number, and then uses the functions created in the hard challenge to output the value in sentence form. Example output: "3 + 4 = 7"
 
 
-const firstNumIn = parseInt(prompt("Enter First Number"))
-const operationSelection = prompt("Enter either +, -, * or /")
-const secondNumIn = parseInt(prompt("Enter Second Number"))
-let finalResult; 
+function entireCalculation(){
+    const firstNumIn = parseInt(prompt("Enter First Number"))
+    const operationSelection = prompt("Enter either +, -, * or /")
+    const secondNumIn = parseInt(prompt("Enter Second Number"))
 
-
-
-function simpleCalc(){
-
+function simpleCalculator(){
+    let finalResult;
     
     //Validate user input
     if (operationSelection !== "+" && operationSelection !== "-" && operationSelection !=="*" && operationSelection!=="/" ){
         prompt("Invalid Selection Please Choose: + , - , * , /")
     }
     if (isNaN(parseInt(firstNumIn)) ){
-         console.log("first Number is not a number");
+         prompt("first Number is not a number");
          return
     }
     if (isNaN(parseInt(secondNumIn)) ){
-         console.log("Second Number is not a number");
+         prompt("Second Number is not a number");
          return
     }
 
@@ -112,25 +110,33 @@ function simpleCalc(){
     
     if (operationSelection == "+") {
         finalResult = (firstNumIn + secondNumIn)
-        return
+    
     }
 
     else if (operationSelection == "-") {
         finalResult = (firstNumIn - secondNumIn)
-        return
+        
     }
 
     else if (operationSelection == "*") {
         finalResult = (firstNumIn * secondNumIn)
-        return
+        
     }
 
     else {
         finalResult = (firstNumIn / secondNumIn)
-        return
     }
+
+    return finalResult;
+
+    
 }
 
-    simpleCalc()
+const finalResult = simpleCalculator()
+console.log(`${firstNumIn} ${operationSelection} ${secondNumIn} = ${finalResult}`);
 
-    console.log(`${firstNumIn} ${operationSelection} ${secondNumIn} = ${finalResult}`);
+}
+
+entireCalculation()
+
+
